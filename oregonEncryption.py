@@ -3,6 +3,8 @@ import base64
 
 LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 LOWERCASE_LETTERS = "abcdefghijkmlnopqrstuvqxyz"
+NUMBERS = "0123456789"
+SPACE = " "
 
 def encoding(file, writeToFile = False, returnValue = True):
 
@@ -11,69 +13,99 @@ def encoding(file, writeToFile = False, returnValue = True):
 
     getLetters = iter(text)
 
-    decmialNums = []
+    decimalNums = []
     for l in getLetters:
         if l in LETTERS or l in LOWERCASE_LETTERS:
             if l == str("A") or l == str("a"):
-                decmialNums.append(0)
+                decimalNums.append(0)
             elif l == str("B") or l == str("b"):
-                decmialNums.append(1)
+                decimalNums.append(1)
             elif l == str("C") or l == str("c"):
-                decmialNums.append(2)
+                decimalNums.append(2)
             elif l == str("D") or l == str("d"):
-                decmialNums.append(3)
+                decimalNums.append(3)
             elif l == str("E") or l == str("e"):
-                decmialNums.append(4)
+                decimalNums.append(4)
             elif l == str("F") or l == str("f"):
-                decmialNums.append(5)
+                decimalNums.append(5)
             elif l == str("G") or l == str("g"):
-                decmialNums.append(6)
+                decimalNums.append(6)
             elif l == str("H") or l == str("h"):
-                decmialNums.append(7)
+                decimalNums.append(7)
             elif l == str("K") or l == str("k"):
-                decmialNums.append(8)
+                decimalNums.append(8)
             elif l == str("J") or l == str("j"):
-                decmialNums.append(9)
+                decimalNums.append(9)
             elif l == str("K") or l == str("k"):
-                decmialNums.append(10)
+                decimalNums.append(10)
             elif l == str("L") or l == str("l"):
-                decmialNums.append(11)
+                decimalNums.append(11)
             elif l == str("M") or l == str("m"):
-                decmialNums.append(12)
+                decimalNums.append(12)
             elif l == str("N") or l == str("n"):
-                decmialNums.append(13)
+                decimalNums.append(13)
             elif l == str("O") or l == str("o"):
-                decmialNums.append(14)
+                decimalNums.append(14)
             elif l == str("P") or l == str("p"):
-                decmialNums.append(15)
+                decimalNums.append(15)
             elif l == str("Q") or l == str("q"):
-                decmialNums.append(16)
+                decimalNums.append(16)
             elif l == str("R") or l == str("r"):
-                decmialNums.append(17)
+                decimalNums.append(17)
             elif l == str("S") or l == str("s"):
-                decmialNums.append(18)
+                decimalNums.append(18)
             elif l == str("T") or l == str("t"):
-                decmialNums.append(19)
+                decimalNums.append(19)
             elif l == str("U") or l == str("u"):
-                decmialNums.append(20)
+                decimalNums.append(20)
             elif l == str("V") or l == str("v"):
-                decmialNums.append(21)
+                decimalNums.append(21)
             elif l == str("W") or l == str("w"):
-                decmialNums.append(22)
+                decimalNums.append(22)
             elif l == str("X") or l == str("x"):
-                decmialNums.append(23)
+                decimalNums.append(23)
             elif l == str("Y") or l == str("y"):
-                decmialNums.append(24)
+                decimalNums.append(24)
             elif l == str("Z") or l == str("z"):
-                decmialNums.append(25)   
+                decimalNums.append(25)   
+            else:
+                print("ERROR")
+                break
+        if l in NUMBERS:
+            if l == str("0"):
+                decimalNums.append("aa")
+            elif l == str("1"):
+                decimalNums.append("ab")
+            elif l == str("2"):
+                decimalNums.append("ac")
+            elif l == str("3"):
+                decimalNums.append("ad")
+            elif l == str("4"):
+                decimalNums.append("ae")
+            elif l == str("5"):
+                decimalNums.append("af")
+            elif l == str("6"):
+                decimalNums.append("ag")
+            elif l == str("7"):
+                decimalNums.append("ah")
+            elif l == str("8"):
+                decimalNums.append("ai")
+            elif l == str("9"):
+                decimalNums.append("aj")
+            else:
+                print("ERROR")
+                break
+        if l in SPACE:
+            if l == str("."):
+                decimalNums.append("<>")
             else:
                 print("ERROR")
                 break
 
-    decmialNums.reverse()
+    decimalNums.reverse()
 
     convertString = []
-    for d in decmialNums:
+    for d in decimalNums:
         string = str(d)
         convertString.extend(string)
 
