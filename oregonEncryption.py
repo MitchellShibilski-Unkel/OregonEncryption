@@ -16,7 +16,7 @@ def encoding(file, writeToFile = False, returnValue = True):
 
     decimalNums = []
     for l in getLetters:
-        if l in LETTERS or l in LOWERCASE_LETTERS or l in SPACE or l in OTHER:
+        if l in LETTERS or l in LOWERCASE_LETTERS or l in SPACE or l in OTHER or l in NUMBERS:
             if l == str("A") or l == str("a"):
                 decimalNums.append(".0")
             elif l == str("B") or l == str("b"):
@@ -72,29 +72,29 @@ def encoding(file, writeToFile = False, returnValue = True):
             elif l == str("Z") or l == str("z"):
                 decimalNums.append(".25")   
             elif l == str("0"):
-                decimalNums.append("aa")
+                decimalNums.append(".aa")
             elif l == str("1"):
-                decimalNums.append("ab")
+                decimalNums.append(".ab")
             elif l == str("2"):
-                decimalNums.append("ac")
+                decimalNums.append(".ac")
             elif l == str("3"):
-                decimalNums.append("ad")
+                decimalNums.append(".ad")
             elif l == str("4"):
-                decimalNums.append("ae")
+                decimalNums.append(".ae")
             elif l == str("5"):
-                decimalNums.append("af")
+                decimalNums.append(".af")
             elif l == str("6"):
-                decimalNums.append("ag")
+                decimalNums.append(".ag")
             elif l == str("7"):
-                decimalNums.append("ah")
+                decimalNums.append(".ah")
             elif l == str("8"):
-                decimalNums.append("ai")
+                decimalNums.append(".ai")
             elif l == str("9"):
-                decimalNums.append("aj")
+                decimalNums.append(".aj")
             elif l == str(" "):
                 decimalNums.append(".<>")
             else:
-                decimalNums.append(l)
+                decimalNums.append(f".{l}")
 
     decimalNums.reverse()
 
